@@ -35,6 +35,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn test -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=SonarSource-Demos_junit-test-coverage-example_a1392355-783c-4434-ab85-06e7549a55ee -Dsonar.projectName='junit-test-coverage-example'
+          SONAR_HOST_URL:: ${{ secrets.SONAR_HOST_URL }}
+        run: mvn test -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey='SonarCloud-Demos_junit-test-coverage-example' -Dsonar.organization='sonarcloud-demos' -Dsonar.projectName='junit-test-coverage-example'
