@@ -14,7 +14,6 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.host.url>https://nautilus.sonarqube.org</sonar.host.url>
     <sonar.coverage.jacoco.xmlReportPaths>./target/site/jacoco-unit-test-coverage-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.projectKey>SonarSource-Demos_junit-test-coverage-example_a1392355-783c-4434-ab85-06e7549a55ee</sonar.projectKey>
     <sonar.projectName>junit-test-coverage-example</sonar.projectName>
